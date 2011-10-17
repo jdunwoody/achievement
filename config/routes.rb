@@ -1,4 +1,6 @@
 Achievement::Application.routes.draw do
+  resources :levels
+
   resources :categories
 
   # The priority is based upon order of creation:
