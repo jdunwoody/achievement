@@ -1,4 +1,6 @@
 Achievement::Application.routes.draw do
+  resources :progressions
+
   resources :levels
 
   resources :categories
