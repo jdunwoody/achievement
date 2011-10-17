@@ -3,7 +3,7 @@ class CreateLevels < ActiveRecord::Migration
     create_table :levels do |t|
       t.string :name
       t.references :level
-      t.reference :categories
+      t.references :categories
 
       t.timestamps
     end
