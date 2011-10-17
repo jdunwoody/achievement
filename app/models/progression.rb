@@ -1,3 +1,3 @@
 class Progression < ActiveRecord::Base
-  belongs_to :levels
+  has_many :levels
 end

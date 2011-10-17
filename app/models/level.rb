@@ -1,3 +1,3 @@
 class Level < ActiveRecord::Base
-  belongs_to :level
+  has_many :category
 end
