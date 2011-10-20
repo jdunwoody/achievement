@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  @title = 'Category'
   # GET /categories
   # GET /categories.json
   def index

@@ -1,4 +1,5 @@
 class LevelsController < ApplicationController
+  @title = 'Levels'
   # GET /levels
   # GET /levels.json
   def index

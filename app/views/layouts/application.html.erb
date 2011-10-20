@@ -5,10 +5,14 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'shared/header' %>
 </head>
 <body>
 
 <%= yield %>
 
 </body>
+<footer>
+  <%= render 'shared/footer' %>
+</footer>
 </html>

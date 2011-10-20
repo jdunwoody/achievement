@@ -1,4 +1,5 @@
 class ProgressionsController < ApplicationController
+  @title = 'Progressions'
   # GET /progressions
   # GET /progressions.json
   def index
