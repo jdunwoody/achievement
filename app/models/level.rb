@@ -1,4 +1,4 @@
 class Level < ActiveRecord::Base
-  has_many :category
-  belongs_to :progression
+  has_many :task
+  belongs_to :skill_tree
 end
