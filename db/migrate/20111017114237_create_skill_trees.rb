@@ -6,6 +6,5 @@ class CreateSkillTrees < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :skill_trees
   end
 end

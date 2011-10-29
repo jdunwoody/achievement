@@ -1,10 +1,10 @@
-<%= form_for(@progression) do |f| %>
-  <% if @progression.errors.any? %>
+<%= form_for(@skill_tree) do |f| %>
+  <% if @skill_tree.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@progression.errors.count, "error") %> prohibited this progression from being saved:</h2>
+      <h2><%= pluralize(@skill_tree.errors.count, "error") %> prohibited this skill_tree from being saved:</h2>
 
       <ul>
-      <% @progression.errors.full_messages.each do |msg| %>
+      <% @skill_tree.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

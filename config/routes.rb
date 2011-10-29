@@ -1,11 +1,11 @@
 Achievement::Application.routes.draw do
-  resources :progressions
+  resources :skill_trees
 
   resources :levels
 
-  resources :categories
+  resources :tasks
 
-  root :to => 'progressions#index'
+  root :to => 'skill_trees#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

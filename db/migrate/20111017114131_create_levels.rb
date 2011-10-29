@@ -7,6 +7,5 @@ class CreateLevels < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :levels, :level_id
   end
 end

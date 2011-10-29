@@ -3,8 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Level</th>
-    <th>Categories</th>
+    <th>Tasks</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +12,7 @@
 <% @levels.each do |level| %>
   <tr>
     <td><%= level.name %></td>
-    <td><%= level.level %></td>
-    <td><%= level.categories %></td>
+    <td><%= level.tasks %></td>
     <td><%= link_to 'Show', level %></td>
     <td><%= link_to 'Edit', edit_level_path(level) %></td>
     <td><%= link_to 'Destroy', level, confirm: 'Are you sure?', method: :delete %></td>

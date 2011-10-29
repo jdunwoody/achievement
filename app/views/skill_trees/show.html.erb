@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @skill_tree.name %>
+</p>
+
+<p>
+  <b>Levels:</b>
+  <%= @skill_tree.levels %>
+</p>
+
+
+<%= link_to 'Edit', edit_skill_tree_path(@skill_tree) %> |
+<%= link_to 'Back', skill_trees_path %>
+
+<%= link_to 'Show', @skill_tree.levels %>
+<%= link_to 'Show', @skill_tree.tasks %>
