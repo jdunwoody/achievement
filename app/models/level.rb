@@ -1,4 +1,4 @@
 class Level < ActiveRecord::Base
-  has_many :task
-  belongs_to :skill_tree
+  belongs_to :skill_tree, :inverse_of => :levels
+  has_many :tasks
 end

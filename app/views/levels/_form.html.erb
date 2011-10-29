@@ -15,10 +15,12 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
-    <%= f.label :tasks %><br />
-    <%= f.text_field :tasks %>
+    <%= f.label :skill_tree %><br />
+    <%= select("level", "skill_tree_id", SkillTree.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
