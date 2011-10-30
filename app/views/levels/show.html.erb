@@ -5,11 +5,11 @@
   <%= @level.name %>
 </p>
 
-<p>
-  <b>Skill tree:</b>
-  <%= @level.skill_tree.name %>
-</p>
+<%#<p>%>
+  <%#<b>Skill tree:</b>%>
+  <%#<%= @level.skill_tree.name %>
+<%#</p>%>
 
-<%= link_to "Tasks", tasks_path(@level.tasks) %>
+<%= link_to "Tasks", level_task_path(@level) %>
 <%= link_to 'Edit', edit_level_path(@level) %> |
-<%= link_to 'Back', levels_path %>
+<%= link_to 'Back', skill_tree_path %>

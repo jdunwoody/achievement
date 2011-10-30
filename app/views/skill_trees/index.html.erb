@@ -1,23 +1,17 @@
-<h1>Listing skill_trees</h1>
+<h1>All Skill Trees</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <%= link_to 'New', new_skill_tree_path %>
 
-<% @skill_trees.each do |skill_tree| %>
-  <tr>
-    <td><%= skill_tree.name %></td>
-    <td><%= link_to 'Show', skill_tree %></td>
-    <td><%= link_to 'Edit', edit_skill_tree_path(skill_tree) %></td>
-    <td><%= link_to 'Destroy', skill_tree, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  <% @skill_trees.each do |skill_tree| %>
+    <tr>
+      <td><%= skill_tree.name %></td>
+      <td><%= link_to 'Show', skill_tree %></td>
+      <td><%= link_to 'Edit', edit_skill_tree_path(skill_tree) %></td>
+      <td><%= link_to 'Destroy', skill_tree, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New skill_tree', new_skill_tree_path %>

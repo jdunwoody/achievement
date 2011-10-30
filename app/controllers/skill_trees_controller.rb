@@ -3,7 +3,7 @@ class SkillTreesController < ApplicationController
   # GET /skill_trees
   # GET /skill_trees.json
   def index
-    @skill_trees = SkillTree.all
+    @skill_trees = SkillTree.all(:order => 'name')
 
     respond_to do |format|
       format.html # index.html.erb

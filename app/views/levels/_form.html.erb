@@ -4,9 +4,9 @@
       <h2><%= pluralize(@level.errors.count, "error") %> prohibited this level from being saved:</h2>
 
       <ul>
-      <% @level.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @level.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -16,12 +16,10 @@
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :skill_tree %><br />
-    <%= select("level", "skill_tree_id", SkillTree.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
-  </div>
+  <%= hidden_field(:level, :skill_tree_id) %>
+</div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>

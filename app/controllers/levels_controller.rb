@@ -1,9 +1,9 @@
 class LevelsController < ApplicationController
   @title = 'Levels'
-  # GET /levels
-  # GET /levels.json
+
   def index
-    @levels = Level.all
+    #@levels = Level.all
+    @levels = Level.find_all_by_skill_tree_id(params[:skill_tree_id])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +25,7 @@ class LevelsController < ApplicationController
   # GET /levels/new
   # GET /levels/new.json
   def new
-    @level = Level.new
+    @level = Level.new(:skill_tree_id => params[:skill_tree_id])
 
     respond_to do |format|
       format.html # new.html.erb

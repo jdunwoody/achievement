@@ -1,9 +1,12 @@
 Achievement::Application.routes.draw do
-  resources :skill_trees
 
-  resources :levels
+  resources :skill_trees do
+    resources :levels
+  end
 
-  resources :tasks
+  resources :levels do
+    resources :tasks
+  end
 
   root :to => 'skill_trees#index'
 

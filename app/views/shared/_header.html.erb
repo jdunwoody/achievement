@@ -1,3 +1,6 @@
-<%= link_to "Skill Trees", skill_trees_path %>
-<%= link_to "Task", tasks_path %>
-<%= link_to "Levels", levels_path %>
+<p>
+  Skill Trees: [<%= link_to "New", new_skill_tree_path %>] <% skill_tree_header.each do |st| %>
+    <span><%= link_to st.name, skill_tree_path(st) %></span>
+  <% end %>
+</p>
+

@@ -1,12 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @skill_tree.name %></h1>
 <p>
-  <b>Name:</b>
-  <%= @skill_tree.name %>
+  <b>Levels:</b>
+  <ul>
+    <li>[<%= link_to 'Add', new_skill_tree_level_path(@skill_tree) %>]</li>
+
+    <% @skill_tree.levels.each do |level| %>
+      <li><%= link_to level.name, skill_tree_level_path(level) %></li>
+    <% end %>
+  </ul>
 </p>
 
-<%= link_to_unless @skill_tree.levels.empty?, 'Levels', levels_path(@skill_tree.levels) %>
-
-<%= link_to 'Edit', edit_skill_tree_path(@skill_tree) %> |
-<%= link_to 'Back', skill_trees_path %>
+<%= link_to 'Edit',edit_skill_tree_path(@skill_tree) %> |
+<%= link_to 'All', skill_trees_path %>
 
