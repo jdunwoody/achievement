@@ -4,9 +4,9 @@
       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
       <ul>
-      <% @task.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @task.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -31,10 +31,7 @@
     <%= f.check_box :status %>
   </div>
 
-  <div class="field">
-    <%= f.label :level %><br />
-    <%= select(:task, :level_id, Level.all.collect {|p| [p.name, p.id]}, {:include_blank => "None"}) %>
-  </div>
+  <%= hidden_field(:task, :level_id) %>
 
   <div class="actions">
     <%= f.submit %>

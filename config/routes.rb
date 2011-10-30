@@ -8,6 +8,8 @@ Achievement::Application.routes.draw do
     resources :tasks
   end
 
+  resources :tasks
+
   root :to => 'skill_trees#index'
 
   # The priority is based upon order of creation:

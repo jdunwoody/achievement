@@ -10,6 +10,9 @@
   <%#<%= @level.skill_tree.name %>
 <%#</p>%>
 
-<%= link_to "Tasks", level_task_path(@level) %>
+<p>
+  <%= link_to "Tasks", level_tasks_path(@level) %>
+</p>
+
 <%= link_to 'Edit', edit_level_path(@level) %> |
 <%= link_to 'Back', skill_tree_path %>

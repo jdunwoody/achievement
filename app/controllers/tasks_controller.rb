@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.find_all_by_level_id(params[:level_id])
 
     respond_to do |format|
       format.html # index.html.erb
