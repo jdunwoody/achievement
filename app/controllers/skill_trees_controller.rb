@@ -1,7 +1,6 @@
 class SkillTreesController < ApplicationController
   @title = 'SkillTrees'
-  # GET /skill_trees
-  # GET /skill_trees.json
+
   def index
     @skill_trees = SkillTree.all(:order => 'name')
 
@@ -11,8 +10,6 @@ class SkillTreesController < ApplicationController
     end
   end
 
-  # GET /skill_trees/1
-  # GET /skill_trees/1.json
   def show
     @skill_tree = SkillTree.find(params[:id])
 
@@ -22,8 +19,6 @@ class SkillTreesController < ApplicationController
     end
   end
 
-  # GET /skill_trees/new
-  # GET /skill_trees/new.json
   def new
     @skill_tree = SkillTree.new
 
@@ -33,13 +28,10 @@ class SkillTreesController < ApplicationController
     end
   end
 
-  # GET /skill_trees/1/edit
   def edit
     @skill_tree = SkillTree.find(params[:id])
   end
 
-  # POST /skill_trees
-  # POST /skill_trees.json
   def create
     @skill_tree = SkillTree.new(params[:skill_tree])
 
@@ -54,8 +46,6 @@ class SkillTreesController < ApplicationController
     end
   end
 
-  # PUT /skill_trees/1
-  # PUT /skill_trees/1.json
   def update
     @skill_tree = SkillTree.find(params[:id])
 
@@ -70,8 +60,6 @@ class SkillTreesController < ApplicationController
     end
   end
 
-  # DELETE /skill_trees/1
-  # DELETE /skill_trees/1.json
   def destroy
     @skill_tree = SkillTree.find(params[:id])
     @skill_tree.destroy

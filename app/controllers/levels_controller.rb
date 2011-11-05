@@ -25,6 +25,7 @@ class LevelsController < ApplicationController
   # GET /levels/new
   # GET /levels/new.json
   def new
+    #debugger
     @level = Level.new(:skill_tree_id => params[:skill_tree_id])
 
     respond_to do |format|
@@ -41,6 +42,7 @@ class LevelsController < ApplicationController
   # POST /levels
   # POST /levels.json
   def create
+    #debugger
     @level = Level.new(params[:level])
 
     respond_to do |format|

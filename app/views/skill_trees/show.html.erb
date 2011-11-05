@@ -4,14 +4,19 @@
 <p>
   <b>Levels:</b>
   <ul>
-    <li>[<%= link_to 'Add', new_skill_tree_level_path(@skill_tree) %>]</li>
+    <li>[<%= link_to 'Add level', new_skill_tree_level_path(@skill_tree) %>]</li>
 
     <% @skill_tree.levels.each do |level| %>
       <li><%= link_to level.name, skill_tree_level_path(level) %></li>
+      <span>
+        <%#<%= button_to 'Delete', :url => level_task_path(@task), :method => :delete, :confirm => "Are you sure?", :title => "Delete" %>%>
+        <%= button_to "Delete", { :action => "delete", :id => level.id, :controller => :levels }, :confirm => "Are you sure?", :method => :delete %>
+      </span>
     <% end %>
   </ul>
 </p>
-
-<%= link_to 'Edit',edit_skill_tree_path(@skill_tree) %> |
-<%= link_to 'All', skill_trees_path %>
+<p>
+  <%= link_to 'Edit',edit_skill_tree_path(@skill_tree) %> |
+  <%= link_to 'All', skill_trees_path %>
+</p>
 

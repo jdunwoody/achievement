@@ -1,18 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @level.name %>
+<b>Name:</b>
+<%= @level.name %>
 </p>
+
+<ul>
+<li>[<%= link_to 'Add task', new_level_task_path(@level) %>]</li>
+
+<% @level.tasks.each do |task| %>
+  <li><%= link_to task.name, level_task_path(task) %>
+
+  <span>
+  <%#<%= button_to 'Delete', :url => level_task_path(@task), :method => :delete, :confirm => "Are you sure?", :title => "Delete" %>%>
+  <%= button_to "Delete", { :action => "delete", :id => @task.id }, :confirm => "Are you sure?", :method => :delete %>
+  </span>
+
+</li>
+
+  <% end %>
+</ul>
 
 <%#<p>%>
   <%#<b>Skill tree:</b>%>
   <%#<%= @level.skill_tree.name %>
-<%#</p>%>
+  <%#</p>%>
 
 <p>
-  <%= link_to "Tasks", level_tasks_path(@level) %>
+  <%= link_to 'Edit', edit_level_path(@level) %> |
+  <%= link_to 'Back to Skill Tree', skill_tree_path(@level.skill_tree) %>
 </p>
 
-<%= link_to 'Edit', edit_level_path(@level) %> |
-<%= link_to 'Back', skill_tree_path %>

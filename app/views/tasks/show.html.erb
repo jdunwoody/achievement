@@ -25,5 +25,7 @@
   <%= @task.level.name %>
 </p>
 
-<%#<%= link_to 'Edit', edit_task_path(@task) %> |%>
-<%#<%= link_to 'Back', tasks_path %>%>
+<p>
+  <%= link_to 'Edit', edit_task_path(@task) %> |
+  <%= link_to 'Back to Level', level_path(@task.level) %>
+</p>

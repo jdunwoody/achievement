@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
   @title = 'Task'
-  # GET /tasks
-  # GET /tasks.json
+
   def index
     @tasks = Task.find_all_by_level_id(params[:level_id])
 
@@ -11,9 +10,8 @@ class TasksController < ApplicationController
     end
   end
 
-  # GET /tasks/1
-  # GET /tasks/1.json
   def show
+    #debugger
     @task = Task.find(params[:id])
 
     respond_to do |format|
@@ -22,10 +20,9 @@ class TasksController < ApplicationController
     end
   end
 
-  # GET /tasks/new
-  # GET /tasks/new.json
   def new
-    @task = Task.new
+    #debugger
+    @task = Task.new(:level_id => params[:level_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -33,14 +30,13 @@ class TasksController < ApplicationController
     end
   end
 
-  # GET /tasks/1/edit
   def edit
+    #debugger
     @task = Task.find(params[:id])
   end
 
-  # POST /tasks
-  # POST /tasks.json
   def create
+    #debugger
     @task = Task.new(params[:task])
 
     respond_to do |format|
@@ -54,8 +50,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # PUT /tasks/1
-  # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
 
@@ -70,9 +64,8 @@ class TasksController < ApplicationController
     end
   end
 
-  # DELETE /tasks/1
-  # DELETE /tasks/1.json
   def destroy
+    debugger
     @task = Task.find(params[:id])
     @task.destroy
 

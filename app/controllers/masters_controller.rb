@@ -1,6 +1,4 @@
 class MastersController < ApplicationController
-  # GET /masters
-  # GET /masters.json
   def index
     @skill_trees = SkillTree.all
 
@@ -10,10 +8,8 @@ class MastersController < ApplicationController
     end
   end
 
-  ## GET /masters/1
-  ## GET /masters/1.json
   #def show
-    #@skill_tree = SkillTrees.find(params[:id])
+    #@skill_trees = SkillTrees.find(params[:id])
 
     #respond_to do |format|
       #format.html # show.html.erb
