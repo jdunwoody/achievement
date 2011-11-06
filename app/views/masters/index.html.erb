@@ -1,26 +1,24 @@
 <h1>Master View</h1>
 
-<div class="main_container">
+<div class="main_container card">
   <% @skill_trees.each do |skill_tree| %>
     <div class="skill_tree">
-      <span> <%= skill_tree.name %> </span>
-      <ul>
+      <div class="title"> <%= skill_tree.name %> </div>
+      <div class="level_list">
         <% skill_tree.levels.each do |level| %>
-          <li>
-            <div class="level">
-              <span> <%= level.name %> </span>
-              <ul>
-                <% level.tasks.each do |task| %>
-                  <li>
-                <div class="task">
-                  <span> <%= task.name %> </span>
-                </div>
-              </li>
-              <% end %>
-            </div>
-          </li>
+          <div class="level">
+            <div class="title"> <%= level.name %> </div>
+            <% level.tasks.each do |task| %>
+              <div class="task">
+                <span class="name"> <%= task.name %> </span>
+                <%= link_to "Visit Other Site", task.url %>
+                <span class="description"> <%= task.description %> </span>
+                <span class="status"> <%= task.status %> </span>
+              </div>
+            <% end %>
+          </div>
         <% end %>
-      </ul>
+      </div>
     </div>
   <% end %>
 </div>

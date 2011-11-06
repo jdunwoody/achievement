@@ -3,17 +3,71 @@
   float: left;
 }
 
-.skill_tree {
-  float: left;
-  border-style: solid;
-  border-width: 1px;
-
-  margin: 10px;
-  padding: 5px;
-
-}
 footer {
   display: block;
   float: left;
 }
 
+.card {
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+
+  margin: 10px;
+  padding: 25px;
+  border-radius: 20px 20px 20px 20px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: DarkGrey;
+
+  .level_list {
+    border-radius: 20px 20px 20px 20px;
+    background-color: PeachPuff;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  span {
+    padding: 10px;
+    margin-below: 10px;
+  }
+
+  .title {
+    margin: 10px;
+  }
+
+  div {
+
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .skill_tree {
+    font-size: 30px;
+  }
+
+  .level {
+  }
+
+  .task {
+    background-color: Azure;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+
+    .name {
+      color: red;
+    }
+
+    .url {
+    }
+
+    .description {
+    }
+
+    .status {
+    }
+  }
+}

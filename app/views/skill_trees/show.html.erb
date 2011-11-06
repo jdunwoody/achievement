@@ -9,8 +9,7 @@
     <% @skill_tree.levels.each do |level| %>
       <li><%= link_to level.name, skill_tree_level_path(level) %></li>
       <span>
-        <%#<%= button_to 'Delete', :url => level_task_path(@task), :method => :delete, :confirm => "Are you sure?", :title => "Delete" %>%>
-        <%= button_to "Delete", { :action => "delete", :id => level.id, :controller => :levels }, :confirm => "Are you sure?", :method => :delete %>
+        <%= button_to "Delete", { :action => "destroy", :id => level.id, :controller => :levels }, :confirm => "Are you sure?", :method => :delete %>
       </span>
     <% end %>
   </ul>

@@ -4,9 +4,9 @@
       <h2><%= pluralize(@skill_tree.errors.count, "error") %> prohibited this skill_tree from being saved:</h2>
 
       <ul>
-      <% @skill_tree.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @skill_tree.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
