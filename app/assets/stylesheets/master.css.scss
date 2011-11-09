@@ -65,9 +65,19 @@ footer {
     }
 
     .description {
+      color: blue;
     }
 
     .status {
+      display: none;
+      color: red;
     }
+  }
+
+  .delete_button div {
+    display: block;
+  }
+  .delete_button {
+    display: block;
   }
 }

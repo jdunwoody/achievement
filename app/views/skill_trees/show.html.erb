@@ -7,10 +7,14 @@
     <li>[<%= link_to 'Add level', new_skill_tree_level_path(@skill_tree) %>]</li>
 
     <% @skill_tree.levels.each do |level| %>
-      <li><%= link_to level.name, skill_tree_level_path(level) %></li>
-      <span>
-        <%= button_to "Delete", { :action => "destroy", :id => level.id, :controller => :levels }, :confirm => "Are you sure?", :method => :delete %>
-      </span>
+      <li><%= link_to level.name, level_path(level) %>
+        <span class="delete_button">
+          <%= button_to "Delete",
+            { :action => "destroy", :id => level.id, :controller => :levels },
+            { :confirm => "Are you sure?", :method => :delete }
+          %>
+        </span>
+      </li>
     <% end %>
   </ul>
 </p>
