@@ -11,7 +11,9 @@
             <% level.tasks.each do |task| %>
               <div class="task">
                 <span class="name"> <%= task.name %> </span>
-                <%= link_to "Visit the Site", task.url %>
+                <% unless task.url.empty? %>
+                  <%= link_to "Visit the Site", task.url %>
+                <% end %>
                 <span class="description"> <%= task.description %> </span>
                 <span class="status"> <%= task.status %> </span>
               </div>
