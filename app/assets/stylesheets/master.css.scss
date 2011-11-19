@@ -1,84 +1,152 @@
-.main_container {
-  display: block;
-  float: left;
+#main_container {
+  width: 100%;
+  height: auto;
 }
 
-footer {
-  display: block;
-  float: left;
+#detail-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+  height: 100%;
+  background-color: 'light-yellow';
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px 10px 10px 10px;
+
+  #detail {
+    display: block;
+    vertical-align: top;
+    /*width: 100%;*/
+    height: 100%;
+  }
 }
 
-.card {
-  float: left;
-  border-style: solid;
-  border-width: 1px;
+#navigation {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
 
-  margin: 10px;
-  padding: 25px;
-  border-radius: 20px 20px 20px 20px;
-  border-width: 1px;
-  border-style: solid;
-  background-color: DarkGrey;
-
-  .level_list {
-    border-radius: 20px 20px 20px 20px;
-    background-color: PeachPuff;
-    font-size: 20px;
-    padding: 10px;
-  }
-
-  span {
-    padding: 10px;
-    margin-below: 10px;
-  }
-
-  .title {
-    margin: 10px;
-  }
-
-  div {
-
-  }
-
-  ul {
+  .navigation-list {
     list-style: none;
-  }
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
 
-  .skill_tree {
-    font-size: 30px;
-    float: left;
-  }
+    .navigation-item {
+      /*clear: left;*/
+      display: block;
+      margin: 5px;
+      /*float: left;*/
 
-  .level {
-  }
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 10px 10px 10px 10px;
+      background-color: LightGrey;
 
-  .task {
-    background-color: Azure;
-    font-size: 18px;
-    border-radius: 10px;
-    padding: 10px;
+      padding: 10px;
+      /*width: 100%;*/
+      position: relative;
 
-    .name {
-      color: red;
+      span {
+        font-size: 2em;
+      }
     }
-
-    .url {
-    }
-
-    .description {
-      color: blue;
-    }
-
-    .status {
-      display: none;
-      color: red;
-    }
-  }
-
-  .delete_button div {
-    display: block;
-  }
-  .delete_button {
-    display: block;
   }
 }
+
+/*Original*/
+
+/*.main_container {*/
+  /*display: block;*/
+  /*float: left;*/
+  /*width: 1048px;*/
+/*}*/
+
+/*footer {*/
+  /*display: block;*/
+  /*float: left;*/
+/*}*/
+
+/*.card {*/
+  /*float: left;*/
+  /*border-style: solid;*/
+  /*border-width: 1px;*/
+  /*display: inline-block;*/
+  /*margin: 10px;*/
+  /*padding: 25px;*/
+  /*border-radius: 10px 10px 10px 10px;*/
+  /*border-width: 1px;*/
+  /*border-style: solid;*/
+  /*background-color: DarkGrey;*/
+
+  /*.level_list {*/
+    /*border-style: solid;*/
+
+    /*border-radius: 10px 10px 10px 10px;*/
+    /*background-color: PeachPuff;*/
+    /*font-size: 10px;*/
+    /*padding: 10px;*/
+  /*}*/
+
+  /*span {*/
+    /*padding: 10px;*/
+    /*margin-below: 10px;*/
+  /*}*/
+
+  /*.title {*/
+    /*margin: 10px;*/
+  /*}*/
+
+  /*div {*/
+
+  /*}*/
+
+  /*ul {*/
+    /*list-style: none;*/
+  /*}*/
+
+  /*.skill_tree {*/
+    /*font-size: 30px;*/
+    /*float: left;*/
+  /*}*/
+
+  /*.task_list {*/
+    /*border-radius: 10px;*/
+  /*}*/
+
+  /*.task {*/
+    /*background-color: Azure;*/
+    /*font-size: 18px;*/
+    /*border-radius: 10px;*/
+    /*padding: 10px;*/
+    /*border-style: solid;*/
+    /*margin-bottom: 5px;*/
+
+    /*.name {*/
+      /*color: red;*/
+    /*}*/
+
+    /*.url {*/
+    /*}*/
+
+    /*.description {*/
+      /*color: blue;*/
+    /*}*/
+
+    /*.status {*/
+      /*display: none;*/
+      /*color: red;*/
+    /*}*/
+  /*}*/
+
+  /*.delete_button div {*/
+    /*display: block;*/
+  /*}*/
+  /*.delete_button {*/
+    /*display: block;*/
+  /*}*/
+/*}*/
