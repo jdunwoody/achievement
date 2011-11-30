@@ -9,7 +9,10 @@ Achievement::Application.routes.draw do
   end
 
   resources :tasks
-  resources :masters
+
+  resources :masters do
+    get :detail, :on => :member
+  end
 
   root :to => 'skill_trees#index'
 

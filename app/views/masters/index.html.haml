@@ -1,0 +1,14 @@
+
+#main_container
+  #navigation
+    .navigation-list
+      -@skill_trees.each do |skill_tree|
+        .navigation-item{:path => "#{detail_master_path(skill_tree)}"}
+          .skill_tree
+            = skill_tree.name
+  #detail-container
+    #detail
+      Empty
+
+:javascript
+  $(function() { App.james.master.init(); });

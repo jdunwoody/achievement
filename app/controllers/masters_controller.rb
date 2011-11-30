@@ -9,6 +9,13 @@ class MastersController < ApplicationController
     end
   end
 
+  def detail
+    @skill_tree = SkillTree.find(params[:id])
+    respond_to do |format|
+      format.html
+    end
+  end
+
   #def show
     #@skill_trees = SkillTrees.find(params[:id])
 
