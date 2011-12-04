@@ -16,9 +16,27 @@
   #detail {
     display: block;
     vertical-align: top;
-    /*width: 100%;*/
     height: 100%;
   }
+
+.level>.name {
+    font-weight: bold;
+  }
+  .skill_tree {
+
+  }
+  .task {
+    background-color: LightBlue;
+  }
+}
+
+.border {
+  /*border-width: 1px;*/
+  /*border-style: solid;*/
+  /*border-radius: 10px 10px 10px 10px;*/
+
+  margin: 5px;
+  padding: 5px;
 }
 
 #navigation {
@@ -42,9 +60,9 @@
       margin: 5px;
       /*float: left;*/
 
-      border-width: 1px;
-      border-style: solid;
-      border-radius: 10px 10px 10px 10px;
+      /*border-width: 1px;*/
+      /*border-style: solid;*/
+      /*border-radius: 10px 10px 10px 10px;*/
       background-color: LightGrey;
 
       padding: 10px;
@@ -53,6 +71,10 @@
 
       span {
         font-size: 2em;
+      }
+
+      .skill-tree {
+        width: auto;
       }
     }
   }

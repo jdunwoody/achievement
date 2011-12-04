@@ -65,7 +65,6 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    debugger
     @task = Task.find(params[:id])
     @task.destroy
 
@@ -73,5 +72,13 @@ class TasksController < ApplicationController
       format.html { redirect_to tasks_url }
       format.json { head :ok }
     end
+  end
+
+  def complete
+    @task = Task.find(params[:id])
+    @task.mark_completed!
+    @task.save!
+
+    render :nothing => true
   end
 end

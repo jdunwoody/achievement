@@ -5,4 +5,8 @@ class Task < ActiveRecord::Base
   def initialise
     status = false
   end
+
+  def mark_completed!
+    self.status = true
+  end
 end

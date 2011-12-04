@@ -9,7 +9,9 @@ gem 'sqlite3'
 gem 'rspec'
 gem 'rspec-rails'
 gem 'minitest'
-gem 'haml'          , '3.1.3'
+gem 'haml'
+gem "simple_form"
+gem "best_in_place"
 
 # Gems used only for assets and not required
 # in production environments by default.

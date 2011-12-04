@@ -8,7 +8,9 @@ Achievement::Application.routes.draw do
     resources :tasks
   end
 
-  resources :tasks
+  resources :tasks do
+    put :complete, :on => :member
+  end
 
   resources :masters do
     get :detail, :on => :member
