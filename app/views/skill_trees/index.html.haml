@@ -1,0 +1,16 @@
+%h1
+  All Skill Trees
+
+%table
+  =link_to 'New', new_skill_tree_path
+
+  -@skill_trees.each do |skill_tree|
+    %tr
+      %td
+        =skill_tree.name
+      %td
+        =link_to 'Show', skill_tree
+      %td
+        =link_to 'Edit', edit_skill_tree_path(skill_tree)
+      %td
+        =link_to 'Destroy', skill_tree, confirm: 'Are you sure?', method: :delete

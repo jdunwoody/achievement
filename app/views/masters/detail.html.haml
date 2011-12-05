@@ -13,5 +13,6 @@
               .description
                 =task.description
               .status
-                =task.status
+                -#=task.status
+                =best_in_place task, :name, :type => :input
               =f.submit 'Complete', :class => 'status-button'

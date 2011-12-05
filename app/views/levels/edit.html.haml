@@ -1,0 +1,9 @@
+%h2
+  = @level.skill_tree.name
+%h1
+  Editing level
+
+= render 'form'
+
+= link_to 'Show', @level
+= link_to 'Back', skill_tree_level_path(@level)

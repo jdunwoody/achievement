@@ -1,0 +1,23 @@
+%p#notice
+  =notice
+
+%p
+  %b
+    Name:
+  =@level.name
+
+%ul
+  %li
+    = link_to 'Add task', new_level_task_path(@level)
+
+  -@level.tasks.each do |task|
+    %li
+      = link_to task.name, task_path(task)
+
+      %span
+        = button_to 'Delete', :url => level_task_path(@task), :method => :delete, :confirm => "Are you sure?", :title => "Delete"
+        -#= button_to "Delete", { :action => "delete", :id => @task.id }, :confirm => "Are you sure?", :method => :delete
+
+%p
+  =link_to 'Edit', edit_level_path(@level)
+  =link_to 'Back to Skill Tree', skill_tree_path(@level.skill_tree)

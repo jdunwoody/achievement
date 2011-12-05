@@ -1,0 +1,20 @@
+%p#notice
+  =notice
+
+%h1
+  =@skill_tree.name
+%p
+  %b
+    Levels:
+  %ul
+    %li
+      =link_to 'Add level', new_skill_tree_level_path(@skill_tree)
+
+      -@skill_tree.levels.each do |level|
+        %li
+          =link_to level.name, level_path(level)
+          %span.delete_button
+            -#=button_to "Delete" { :action => "destroy", :id => level.id, :controller => :levels }, { :confirm => "Are you sure?", :method => :delete }
+%p
+  =link_to 'Edit', edit_skill_tree_path(@skill_tree)
+  =link_to 'All', skill_trees_path

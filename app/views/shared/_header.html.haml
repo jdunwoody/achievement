@@ -1,0 +1,9 @@
+%p
+  %h1
+    =link_to 'Master View', masters_path
+Skill Trees:
+=link_to "New", new_skill_tree_path
+
+-skill_tree_header.each do |st|
+  %span
+    =link_to st.name, skill_tree_path(st)

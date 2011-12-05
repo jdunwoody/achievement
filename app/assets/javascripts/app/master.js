@@ -17,6 +17,10 @@ App.james.master.init = function() {
       path = $(this).attr('path');
       App.james.master.showDetailPane(event, path)
     });
-  })
+
+    alert("best in place");
+    /* Activating Best In Place */
+    jQuery(".best_in_place").best_in_place();
+  });
 }
 
