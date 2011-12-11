@@ -18,7 +18,6 @@ App.james.master.init = function() {
       App.james.master.showDetailPane(event, path)
     });
 
-    alert("best in place");
     /* Activating Best In Place */
     jQuery(".best_in_place").best_in_place();
   });

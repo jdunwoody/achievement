@@ -6,7 +6,7 @@ class Task < ActiveRecord::Base
     status = false
   end
 
-  def mark_completed!
-    self.status = true
+  def toggle_completed!
+    self.status = !self.status
   end
 end
