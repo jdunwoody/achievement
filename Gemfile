@@ -42,5 +42,5 @@ end
 
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+  #gem 'sqlite3-ruby', :require => 'sqlite3'
 end
