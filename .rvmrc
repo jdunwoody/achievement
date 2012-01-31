@@ -1,5 +1,1 @@
-/*if [[ `rvm list` == *1.9.2-p290-patched* ]]; then*/
-  /*rvm 1.9.2-p290-patched@achievements --create*/
-/*else*/
-  rvm 1.9.2-p290@achievements --create
-/*fi*/
+rvm 1.9.2@achievements --create
