@@ -11,7 +11,7 @@ gem 'rspec-rails'
 gem 'minitest'
 gem 'haml'
 gem "simple_form"
-gem "best_in_place"
+#gem "best_in_place"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,9 +33,14 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+#gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+end
+
+group :development, :test do
+  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
