@@ -5,15 +5,16 @@
         .name
           =level.name
         -level.tasks.each do |task|
-          =simple_form_for(task, :url => complete_task_path(task, :format => :json)) do |f|
-            .task.border
-              %div{:class => task.status ? 'task-complete' : 'task-incomplete'}
-                = task.status ? 'Complete' : 'Incomplete'
-              .name
-                =task.name
-              .description
-                =task.description
-              .status
-                -#=task.status
-                =best_in_place task, :name, :type => :input
-              =f.submit "#{task.status ? 'Incomplete' : 'Complete'}", :class => 'status-button'
+          -#=simple_form_for(task, :url => complete_task_path(task, :format => :json)) do |f|
+          .task.border
+            %div{:class => task.status ? 'task-complete' : 'task-incomplete'}
+              = task.status ? 'Complete' : 'Incomplete'
+            .name
+              =task.name
+            .description
+              =task.description
+            .status
+              -#=task.status
+              =task.name
+              -#=best_in_place task, :name, :type => :input
+            -#=f.submit "#{task.status ? 'Incomplete' : 'Complete'}", :class => 'status-button'

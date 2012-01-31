@@ -21,5 +21,16 @@ App.james.master.init = function() {
     /* Activating Best In Place */
     jQuery(".best_in_place").best_in_place();
   });
+
+  $.ajaxSetup ({
+    cache: false
+  });
 }
 
+//var ajax_load = "<img src='img/load.gif' alt='loading...' />";
+
+var loadUrl = "ajax/load.php";
+$(".status").click(function(){
+  //$("#result").html(ajax_load).load(loadUrl);
+  $("#result").html(ajax_load).load(loadUrl);
+});
