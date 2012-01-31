@@ -6,9 +6,6 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'rspec'
-gem 'rspec-rails'
-gem 'minitest'
 gem 'haml'
 gem "simple_form"
 #gem "best_in_place"
@@ -41,6 +38,9 @@ group :test do
 end
 
 group :development, :test do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'minitest'
+  #gem 'ruby-debug19', :require => 'ruby-debug'
   #gem 'sqlite3-ruby', :require => 'sqlite3'
 end
