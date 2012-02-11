@@ -16,5 +16,4 @@
             .status
               -#=task.status
               =task.name
-              -#=best_in_place task, :name, :type => :input
             -#=f.submit "#{task.status ? 'Incomplete' : 'Complete'}", :class => 'status-button'
