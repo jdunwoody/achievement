@@ -8,8 +8,9 @@
           %li
             =msg
 
-  -#.field
-    -#=best_in_place @skill_tree, :name, :type => :input
+  .field
+    =f.label :name
+    =f.text_field :name
 
   .actions
     =f.submit
