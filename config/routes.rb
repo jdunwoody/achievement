@@ -3,7 +3,7 @@ Achievement::Application.routes.draw do
   resources :skill_trees do
     resources :levels
 
-    get 'tasks', :on => :member
+    #get 'tasks', :on => :member
   end
 
   resources :levels do

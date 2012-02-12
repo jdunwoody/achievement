@@ -70,6 +70,22 @@ class SkillTreesController < ApplicationController
     end
   end
 
+  def levels
+    @skill_tree = SkillTree.find(params[:id])
+    @levels = []
+    @skill_tree.levels.each do |level|
+      level.tasks.each do |task|
+        @tasks << task
+      end
+    end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      #format.json { render json: @tasks }
+      format.json { render :json => @levels.to_json(:include => { :tasks => { :only => [:id, :name] } }) }
+    end
+  end
+
   def tasks
     @skill_tree = SkillTree.find(params[:id])
     @tasks = []
