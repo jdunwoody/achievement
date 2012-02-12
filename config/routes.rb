@@ -4,6 +4,7 @@ Achievement::Application.routes.draw do
     resources :levels
 
     #get 'tasks', :on => :member
+    get 'everything', :on => :member
   end
 
   resources :levels do
