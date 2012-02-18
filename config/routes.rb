@@ -12,7 +12,7 @@ Achievement::Application.routes.draw do
   end
 
   resources :tasks do
-    put :complete, :on => :member
+    put :toggle_complete, :on => :member
   end
 
   resources :masters do
