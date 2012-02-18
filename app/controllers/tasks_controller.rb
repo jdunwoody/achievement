@@ -74,13 +74,12 @@ class TasksController < ApplicationController
     end
   end
 
-  def complete
+  def toggle_complete
     @task = Task.find(params[:id])
     @task.toggle_completed!
+
     #@task.save!
-
     #render :nothing => true
-
     #@user = User.find(params[:id])
 
     respond_to do |format|
