@@ -1,13 +1,29 @@
 
+#http://localhost:3000/skill_trees/1.json
+#http://localhost:3000/skill_trees.json
+#
+#Create JSON
+#curl -H "Content-Type:application/json" -H "Accept:application/json" -d "{\"skill_tree\":{\"name\":\"SkillTree from json\"}}" http://localhost:3000/skill_trees
+#
+#Edit JSON
+#curl -X PUT -H "Content-Type:application/json" -H "Accept:application/json" -d "{\"skill_tree\":{\"name\":\"SkillTree edited json\"}}" http://localhost:3000/skill_trees/3
+#
+#Delete JSON
+#curl -X DELETE -H "Content-Type:application/json" -H "Accept:application/json" http://localhost:3000/skill_trees/3
+#
+#Toggle Complete task
+#curl -X PUT -H "Content-Type:application/json" -H "Accept:application/json" http://localhost:3000/tasks/3/toggle_complete.json -d ''
+#
+#
 
 Progression
-  name  Photography
-  levels  Beginner, Intermediate, Master
+name  Photography
+levels  Beginner, Intermediate, Master
 
 Level
-  name Beginner
-  progression Photography
-  categories
+name Beginner
+progression Photography
+categories
 
 Cateogry (rename to Task)
   name
@@ -16,7 +32,7 @@ Cateogry (rename to Task)
   status
 
 
-Photography
+  Photography
 
 
 
@@ -24,22 +40,22 @@ Photography
 
 
 
-"Running Man"
+  "Running Man"
 
-Achievement
-Apprentice	Run once a week
-
-
-Aspiring	Run 3 times a week
+  Achievement
+  Apprentice	Run once a week
 
 
-Skilled	Improve my time by 1 minute
+  Aspiring	Run 3 times a week
 
 
-Master	Complete a 10km race
-Join a running group
+  Skilled	Improve my time by 1 minute
 
 
-Legend	Run a half marathon
+  Master	Complete a 10km race
+  Join a running group
+
+
+  Legend	Run a half marathon
 
 

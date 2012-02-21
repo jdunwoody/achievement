@@ -85,8 +85,8 @@ class TasksController < ApplicationController
     respond_to do |format|
       if @task.save! #@user.update_attributes(params[:user])
         format.html { redirect_to(@task, :notice => 'User was successfully updated.') }
-        #format.json { render :json => @task.errors.full_messages, :status => :unprocessable_entity }
-        format.json { head :ok }
+        format.json { render :json => @task.status, :status => :ok }
+        #format.json { head :ok }
       else
         format.html { render :action => "edit" }
         format.json { render :json => @task.errors.full_messages, :status => :unprocessable_entity }
