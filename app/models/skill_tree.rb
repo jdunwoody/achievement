@@ -1,6 +1,10 @@
 class SkillTree < ActiveRecord::Base
   has_many :levels
 
+  def as_json(options={})
+    super(:only =>[:id, :name, :score])
+  end
+
   def score
     score = 0.0
     count = 0
