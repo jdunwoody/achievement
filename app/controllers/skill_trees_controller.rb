@@ -78,12 +78,17 @@ class SkillTreesController < ApplicationController
       format.json { render :json => @skill_tree.to_json(
         :include => { :levels => { :include => { :tasks => {} } }}
       )}
+    end
+  end
 
-        #konata.to_json(:include => { :posts => {
-        #:include => { :comments => {
-        #:only => :body } },
-        #:only => :title } })
+  def calculate_status
+    @skill_tree = SkillTree.find(params[:id])
 
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render :json => @skill_tree.calculate_status.to_json(
+        :include => { :levels => { :include => { :tasks => {} } }}
+      )}
     end
   end
 

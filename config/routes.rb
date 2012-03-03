@@ -5,6 +5,7 @@ Achievement::Application.routes.draw do
 
     #get 'tasks', :on => :member
     get 'everything', :on => :member
+    get 'calculate_status', :on => :member
   end
 
   resources :levels do
