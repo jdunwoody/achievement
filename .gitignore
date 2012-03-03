@@ -35,3 +35,4 @@ config/abr.yml
 vendor/ruby
 db/bootstrap/*.dump
 db/bootstrap/*.pgz
+NERD*
