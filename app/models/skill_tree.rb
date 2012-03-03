@@ -1,7 +1,7 @@
 class SkillTree < ActiveRecord::Base
   has_many :levels
 
-  def calculate_status
+  def score
     score = 0.0
     count = 0
 

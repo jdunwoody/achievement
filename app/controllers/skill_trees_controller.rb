@@ -81,12 +81,12 @@ class SkillTreesController < ApplicationController
     end
   end
 
-  def calculate_status
+  def score
     @skill_tree = SkillTree.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render :json => @skill_tree.calculate_status.to_json(
+      format.json { render :json => @skill_tree.score.to_json(
         :include => { :levels => { :include => { :tasks => {} } }}
       )}
     end
