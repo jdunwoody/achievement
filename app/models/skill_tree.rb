@@ -2,7 +2,7 @@ class SkillTree < ActiveRecord::Base
   has_many :levels
 
   def as_json(options={})
-    super(:only =>[:id, :name, :score])
+    super(options.merge(:only =>[:id, :name], :methods => [:score]))
   end
 
   def score
