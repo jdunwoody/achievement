@@ -2,11 +2,12 @@ class Task < ActiveRecord::Base
   belongs_to :level, :inverse_of => :tasks
   has_many :frequencies
 
-  #def as_json(options={})
-    #super(options.merge(:only =>
-                        #[:id, :name, :url, :description,
-                        #:status, :frequency]))
-  #end
+  def as_json(options={})
+    super(options.merge( :include => []))
+  end
+
+  #super(options.merge(:only =>[:id, :name], :include => [:levels], :methods => [:score]))
+  #super(options.merge(:only => [:id, :name, :url, :description, :status, :frequency]))
 
   def initialise
     status = false

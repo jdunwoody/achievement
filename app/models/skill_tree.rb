@@ -2,8 +2,15 @@ class SkillTree < ActiveRecord::Base
   has_many :levels
 
   def as_json(options={})
-    #super(options.merge(:only =>[:id, :name], :include => [:levels], :methods => [:score]))
     super(options.merge(:include => [:levels], :methods => [:score]))
+  end
+
+  #super(:include => [:levels])
+  #super(options.merge(:only =>[:id, :name], :include => [:levels], :methods => [:score]))
+  #user.as_json(:include => {:photos => {:include => [:comments, :likes]}})
+
+  def tasks
+    levels.map {|level| level.tasks}.flatten
   end
 
   def score

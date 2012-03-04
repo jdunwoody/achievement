@@ -74,23 +74,27 @@ class SkillTreesController < ApplicationController
     @skill_tree = SkillTree.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @skill_tree.to_json(
-        :include => { :levels => { :include => { :tasks => {} } }}
-      )}
+      format.html
+      format.json { render :json => @skill_tree }
     end
   end
 
-  def score
-    @skill_tree = SkillTree.find(params[:id])
+  def tasks
+    skill_tree = SkillTree.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @skill_tree.score.to_json(
-        :include => { :levels => { :include => { :tasks => {} } }}
-      )}
+      format.json { render :json => skill_tree.tasks }
     end
   end
+
+  #def score
+    #@skill_tree = SkillTree.find(params[:id])
+
+    #respond_to do |format|
+      #format.html
+      #format.json { render :json => @skill_tree.score }
+    #end
+  #end
 
   #def tasks
     #@skill_tree = SkillTree.find(params[:id])

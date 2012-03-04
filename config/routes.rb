@@ -5,7 +5,7 @@ Achievement::Application.routes.draw do
 
     #get 'tasks', :on => :member
     get 'everything', :on => :member
-    get 'score', :on => :member
+    get 'tasks', :on => :member
   end
 
   resources :levels do
