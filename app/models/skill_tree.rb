@@ -10,7 +10,10 @@ class SkillTree < ActiveRecord::Base
   #user.as_json(:include => {:photos => {:include => [:comments, :likes]}})
 
   def tasks
-    levels.map {|level| level.tasks}.flatten
+    #tasks = levels.map {|level| level.tasks}.flatten
+    #SkillTree.find(1).levels.map{|level| level.tasks}.flatten.sort{ |a,b|  a.status ? (b.status ? 0 : -1) : (b.status ? 1 : 0) }.map{|t|t.status}
+
+    levels.map{|level| level.tasks}.flatten.sort{ |a,b|  a.status ? (b.status ? 0 : -1) : (b.status ? 1 : 0) }
   end
 
   def score

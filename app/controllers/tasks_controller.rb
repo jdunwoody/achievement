@@ -11,7 +11,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    #debugger
     @task = Task.find(params[:id])
 
     respond_to do |format|
@@ -21,7 +20,6 @@ class TasksController < ApplicationController
   end
 
   def new
-    #debugger
     @task = Task.new(:level_id => params[:level_id])
 
     respond_to do |format|
@@ -31,12 +29,10 @@ class TasksController < ApplicationController
   end
 
   def edit
-    #debugger
     @task = Task.find(params[:id])
   end
 
   def create
-    #debugger
     @task = Task.new(params[:task])
 
     respond_to do |format|
@@ -76,13 +72,9 @@ class TasksController < ApplicationController
 
   def toggle_complete
     @task = Task.find(params[:id])
-    puts "Task #{@task}"
     @task.toggle_completed!
-    puts "Task after toggle #{@task}"
 
     @task.save!
-    #render :nothing => true
-    #@user = User.find(params[:id])
 
     respond_to do |format|
       if @task.save! #@user.update_attributes(params[:user])
