@@ -76,9 +76,11 @@ class TasksController < ApplicationController
 
   def toggle_complete
     @task = Task.find(params[:id])
+    puts "Task #{@task}"
     @task.toggle_completed!
+    puts "Task after toggle #{@task}"
 
-    #@task.save!
+    @task.save!
     #render :nothing => true
     #@user = User.find(params[:id])
 
