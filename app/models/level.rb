@@ -10,14 +10,15 @@ class Level < ActiveRecord::Base
   #super(options.merge(:only =>[:id, :name], :include => [:tasks]))
 
   def score
-    score = 0.0
+    num_true = 0
     count = 0
 
     tasks.each do |task|
       count = count + 1
-      score = score + 1 if task.status
+      num_true = num_true + 1 if task.status
     end
 
-    score/count
+    return 0 if count == 0
+    num_true.to_f/count
   end
 end
