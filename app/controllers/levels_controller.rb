@@ -11,8 +11,6 @@ class LevelsController < ApplicationController
     end
   end
 
-  # GET /levels/1
-  # GET /levels/1.json
   def show
     @level = Level.find(params[:id])
 
@@ -22,10 +20,7 @@ class LevelsController < ApplicationController
     end
   end
 
-  # GET /levels/new
-  # GET /levels/new.json
   def new
-    #debugger
     @level = Level.new(:skill_tree_id => params[:skill_tree_id])
 
     respond_to do |format|
@@ -34,15 +29,11 @@ class LevelsController < ApplicationController
     end
   end
 
-  # GET /levels/1/edit
   def edit
     @level = Level.find(params[:id])
   end
 
-  # POST /levels
-  # POST /levels.json
   def create
-    #debugger
     @level = Level.new(params[:level])
 
     respond_to do |format|
@@ -56,8 +47,6 @@ class LevelsController < ApplicationController
     end
   end
 
-  # PUT /levels/1
-  # PUT /levels/1.json
   def update
     @level = Level.find(params[:id])
 
@@ -72,8 +61,6 @@ class LevelsController < ApplicationController
     end
   end
 
-  # DELETE /levels/1
-  # DELETE /levels/1.json
   def destroy
     @level = Level.find(params[:id])
     @level.destroy
