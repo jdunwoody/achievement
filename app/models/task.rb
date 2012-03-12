@@ -16,4 +16,8 @@ class Task < ActiveRecord::Base
   def toggle_completed!
     self.status = !self.status
   end
+
+  def status
+    super.nil? ? false : super
+  end
 end
