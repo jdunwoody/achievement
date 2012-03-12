@@ -1,1 +1,5 @@
-rvm 1.9.2@achievements --create
+rvm 1.9.2-p290@newco --create
+
+if ! command -v bundle ; then
+  gem install bundler
+fi

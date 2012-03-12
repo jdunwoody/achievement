@@ -71,11 +71,11 @@ class SkillTreesController < ApplicationController
   end
 
   def everything
-    @skill_tree = SkillTree.find(params[:id])
+    @skill_trees = SkillTree.all
 
     respond_to do |format|
       format.html
-      format.json { render :json => @skill_tree }
+      format.json { render :json => @skill_trees }
     end
   end
 
@@ -83,6 +83,7 @@ class SkillTreesController < ApplicationController
     skill_tree = SkillTree.find(params[:id])
 
     respond_to do |format|
+      format.html # index.html.erb
       format.json { render :json => skill_tree.tasks }
     end
   end

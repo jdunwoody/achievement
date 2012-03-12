@@ -4,7 +4,7 @@ Achievement::Application.routes.draw do
     resources :levels
 
     #get 'tasks', :on => :member
-    get 'everything', :on => :member
+    get 'everything', :on => :collection
     get 'tasks', :on => :member
   end
 
@@ -17,7 +17,7 @@ Achievement::Application.routes.draw do
   end
 
   resources :masters do
-    get :detail, :on => :member
+    get 'lots', :on => :member
   end
 
   root :to => 'skill_trees#index'

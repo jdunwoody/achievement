@@ -3,9 +3,10 @@ class Level < ActiveRecord::Base
   has_many :tasks
 
   def as_json(options={})
-    super(options.merge(:include => [:tasks], :methods => [:score]))
+    super({:include => [:tasks], :methods => [:score]}.reverse_merge(options))
   end
 
+  #super(options.merge(:methods => [:tasks, :score]))
   #super(options.merge(:only =>[:id, :name], :include => [:levels], :methods => [:score]))
   #super(options.merge(:only =>[:id, :name], :include => [:tasks]))
 

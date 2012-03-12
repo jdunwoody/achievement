@@ -9,10 +9,11 @@ class MastersController < ApplicationController
     end
   end
 
-  def detail
-    @skill_tree = SkillTree.find(params[:id])
+  def lots
+    @skill_tree = SkillTree.all
     respond_to do |format|
-      format.html
+      format.html # index.html.erb
+      format.json { render json: @skill_trees }
     end
   end
 
