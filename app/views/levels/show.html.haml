@@ -9,6 +9,8 @@
 %ul
   %li
     = link_to 'Add task', new_level_task_path(@level)
+  %li
+    = link_to 'Add another level', new_skill_tree_level_path(@level.skill_tree)
 
   -@level.tasks.each do |task|
     %li

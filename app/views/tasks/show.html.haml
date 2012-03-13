@@ -1,0 +1,32 @@
+%p#notice
+  =notice
+
+%h1
+  %b
+    Name:
+  =@task.name
+
+%p
+  %b
+    Url:
+  =@task.url
+
+%p
+  %b
+    Description:
+  =@task.description
+
+%p
+  %b
+    Status:
+  =@task.status
+
+%p
+  %b
+    Level:
+  =@task.level.name
+
+%p
+  = link_to 'Add task', new_level_task_path(@task.level)
+  = link_to 'Edit', edit_task_path(@task)
+  = link_to 'Back to Level', level_path(@task.level)

@@ -1,0 +1,36 @@
+%h1
+  Listing tasks
+
+%table
+  %tr
+    %th
+      Name
+    %th
+      Url
+    %th
+      Description
+    %th
+      Status
+    %th
+    %th
+    %th
+
+  - @tasks.each do |task| %>
+  %tr
+    %td
+      = task.name
+    %td
+      = task.url
+    %td
+      = task.description
+    %td
+      = task.status
+    %td
+      = link_to 'Show', level_tasks_path(task.level)
+    %td
+      = link_to 'Edit', edit_level_task_path(task.level)
+    %td
+      = link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete
+
+
+= link_to 'New task', new_level_task_path
