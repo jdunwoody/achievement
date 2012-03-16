@@ -15,6 +15,6 @@
           =link_to level.name, level_path(level)
           %span.delete_button
             -#=button_to "Delete" { :action => "destroy", :id => level.id, :controller => :levels }, { :confirm => "Are you sure?", :method => :delete }
-%p
+.footer
   =link_to 'Edit', edit_skill_tree_path(@skill_tree)
   =link_to 'All', skill_trees_path
