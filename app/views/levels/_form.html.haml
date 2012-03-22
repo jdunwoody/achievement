@@ -6,13 +6,13 @@
       %ul
         -@level.errors.full_messages.each do |msg|
           %li
-            = msg
+            =msg
 
   .field
     = f.label :name
     = f.text_field :name
 
-  = hidden_field(:level, :skill_tree_id)
+  =hidden_field(:level, :skill_tree_id)
 
   .actions
     =f.submit
