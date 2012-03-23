@@ -6,12 +6,11 @@
     Name:
   =@level.name
 
-%ul
-  %li
-    = link_to 'Add task', new_level_task_path(@level)
-  %li
-    = link_to 'Add another level', new_skill_tree_level_path(@level.skill_tree)
+%p
+  = link_to 'Add task', new_level_task_path(@level)
+  = link_to 'Add another level', new_skill_tree_level_path(@level.skill_tree)
 
+%ul
   -@level.tasks.each do |task|
     %li
       = link_to task.name, task_path(task)
